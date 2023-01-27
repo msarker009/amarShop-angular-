@@ -1,0 +1,28 @@
+<nav class="nav">
+    <h1><a routerLink="/">amarShop</a></h1>
+    <div *ngIf="menuType === 'default'" class="nav-search">
+        <input type="text" (keyup)="searchProduct($event)" (blur)="hideSearch()"
+               #searchItem placeholder="Search for Products" />
+        <button (click)="submitSearch(searchItem.value)">Search</button>
+      <ul class="search-result" *ngIf="searchResult">
+        <li *ngFor="let item of searchResult">
+          <a href="">{{item.name}}</a>
+        </li>
+      </ul>
+    </div>
+  <div [ngSwitch]="menuType">
+    <ul *ngSwitchCase="'default'">
+        <li><a routerLink="/">Home</a></li>
+        <li><a routerLink="/seller-auth">Seller</a></li>
+        <li><a routerLink="#">Login</a></li>
+        <li><a routerLink="#">Cart(0)</a></li>
+    </ul>
+    <ul *ngSwitchCase="'seller'">
+      <li><a routerLink="seller-add-product">Add Product</a></li>
+      <li><a routerLink="seller-home">Product List</a></li>
+      <li><a (click)="logOut()">Logout</a></li>
+      <li><a >{{sellerName | titlecase}}</a></li>
+    </ul>
+  </div>
+
+</nav>

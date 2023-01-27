@@ -1,0 +1,90 @@
+{
+  "seller": [
+    {
+      "name": "Mehedi Hasan",
+      "email": "ms@gmail.com",
+      "password": "abc@123",
+      "id": 1
+    },
+    {
+      "name": "Munna Sarker",
+      "email": "mm@gmail.com",
+      "password": "123456",
+      "id": 2
+    }
+  ],
+  "products": [
+    {
+      "name": "Iphone 13 pro",
+      "price": "100000",
+      "color": "Black",
+      "category": "mobiles",
+      "description": "Apple iPhone 13 smartphone",
+      "image": "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-13-01.jpg",
+      "id": 1
+    },
+    {
+      "name": "Samsung Galaxy",
+      "price": 30000,
+      "color": "Gray",
+      "category": "mobiles",
+      "description": "Samsung mobile 6.5 inch display",
+      "image": "https://www.mobiledokan.com/wp-content/uploads/2022/04/Samsung-Galaxy-A73-5G.jpg",
+      "id": 2
+    },
+    {
+      "name": "HP Laptop",
+      "price": 50000,
+      "color": "Silver",
+      "category": "Laptops",
+      "description": "Processor: Intel Core i3-1115G4 (6MB Cache, 3.00 GHz up to 4.10 GHz)",
+      "image": "https://www.startech.com.bd/image/cache/catalog/laptop/hp-laptop/250-g8/250-g8-01-500x500.jpg",
+      "id": 3
+    },
+    {
+      "name": "Smart Watch",
+      "price": 3000,
+      "color": "Black",
+      "category": "Watches",
+      "description": "T500 Smart Watch Bluetooth Heart Rate Monitor Iwo 8 Lite Smartwatch",
+      "image": "https://www.penguin.com.bd/wp-content/uploads/2021/09/Hoco-Y1-Smart-Watch-2.jpg",
+      "id": 4
+    },
+    {
+      "name": "USB Charger",
+      "price": 1500,
+      "color": "Black",
+      "category": "Charger",
+      "description": " USB Charger 5V 1.5A 5V 2A 2.1A Universal ",
+      "image": "https://blackbud.com.bd/wp-content/uploads/2022/11/samsung-25w-pd-adapter-with-type-c-to-type-c-cable-black.jpg",
+      "id": 5
+    },
+    {
+      "name": "Router",
+      "price": 2000,
+      "color": "White",
+      "category": "Router",
+      "description": "TP-Link AC1200 WiFi Router",
+      "image": "https://m.media-amazon.com/images/I/41lxsV5WvML._AC_SX679_.jpg",
+      "id": 6
+    },
+    {
+      "name": "Gaming Keyboard",
+      "price": 2000,
+      "color": "Black",
+      "category": "Keyboard",
+      "description": "Corsair K70 PRO RGB Optical-Mechanical Gaming Keyboard - OPX Linear Switches",
+      "image": "https://m.media-amazon.com/images/I/71zXP44QR1L._AC_SL1500_.jpg",
+      "id": 7
+    },
+    {
+      "name": "power bank",
+      "price": 1450,
+      "color": "Blue",
+      "category": "Power Bank",
+      "description": "Capacity: 5000 mAh\nMaterial: ABS, PC\nUltra Lightweight and Slim",
+      "image": "https://www.startech.com.bd/image/cache/catalog/accessories/power-bank/remex/rpp-78/rpp-78-1-500x500.png",
+      "id": 8
+    }
+  ]
+}

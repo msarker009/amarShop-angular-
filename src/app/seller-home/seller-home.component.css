@@ -1,0 +1,9 @@
+table {
+  text-align: center;
+  border-collapse: collapse;
+}
+table th, table td {
+  border: 1px solid gray;
+  padding: 10px;
+  min-height: 300px;
+}
