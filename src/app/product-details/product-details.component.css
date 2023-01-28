@@ -1,0 +1,30 @@
+.product-image {
+  width: 100%;
+  height: 400px;
+  object-fit: contain;
+  margin-top: 30px;
+}
+.product-details {
+  margin-top: 30px;
+}
+.quantity-group {
+  margin-top: 20px;
+}
+.quantity-group button {
+  padding: 5px;
+}
+.quantity-group input {
+  padding: 5px;
+  width: 80px;
+}
+.add-button, .buy-button {
+  border-radius: 20px;
+  background: #FFD814;
+  border: 1px solid #FCD200;
+  cursor: pointer;
+  margin-right: 5px;
+}
+.buy-button {
+  background: #FFA41C;
+  border-color: #FF8F00;
+}
