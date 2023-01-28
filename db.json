@@ -13,6 +13,56 @@
       "id": 2
     }
   ],
+  "users": [
+    {
+      "name": "Sakib Hasan",
+      "email": "sk@gmail.com",
+      "password": "sk@123",
+      "id": 1
+    },
+    {
+      "name": "fgjj",
+      "email": "fdjgjk",
+      "password": "fdkkgjdk",
+      "id": 2
+    },
+    {
+      "name": "fgjj",
+      "email": "fdjgjk",
+      "password": "fdkkgjdk",
+      "id": 3
+    },
+    {
+      "name": "vfjg",
+      "email": "fdjhgdj",
+      "password": "fkjkj",
+      "id": 4
+    },
+    {
+      "name": "fjdgf",
+      "email": "fdjhf",
+      "password": "dfjghdj",
+      "id": 5
+    },
+    {
+      "name": "jj",
+      "email": "jjj",
+      "password": "jjj",
+      "id": 6
+    },
+    {
+      "name": "bhjbh",
+      "email": "jjk",
+      "password": "nknnk",
+      "id": 7
+    },
+    {
+      "name": "fkkgkjd",
+      "email": "jhhgrjts",
+      "password": "kfdghkfjdkh",
+      "id": 8
+    }
+  ],
   "products": [
     {
       "name": "Iphone 13 pro",
