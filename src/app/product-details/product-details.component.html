@@ -9,7 +9,8 @@
       <h5>Color: {{productDetails.color}}</h5>
       <h6>Category: {{productDetails.category}}</h6>
       <h6>Description: {{productDetails.description}}</h6>
-      <button class="add-button">Add to Cart</button>
+      <button class="add-button" *ngIf="!removeCart" (click)="addToCart()">Add to Cart</button>
+      <button class="add-button" *ngIf="removeCart" (click)="removeFromCart(productDetails.id)">Remove From Cart</button>
       <button class="buy-button">Buy Now</button>
       <div class="quantity-group">
         <button (click)="handleQuantity('min')">-</button>
