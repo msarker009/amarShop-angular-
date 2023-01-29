@@ -12,9 +12,10 @@ export class HeaderComponent implements OnInit {
   constructor(private route: Router, private productService: ProductService) {
   }
 
-  menuType: string = 'default';
-  sellerName: string = '';
-  userName: string = '';
+  menuType = 'default';
+  sellerName = '';
+  userName = '';
+  cartItems = 0;
   searchResult: undefined | ProductData[];
 
   ngOnInit(): void {
@@ -23,19 +24,27 @@ export class HeaderComponent implements OnInit {
         if (localStorage.getItem('seller') && result.url.includes('seller')) {
           this.menuType = 'seller';
           if (localStorage.getItem('seller')) {
-            let sellerStore = localStorage.getItem('seller')
-            let sellerData = sellerStore && JSON.parse(sellerStore)[0];
+            const sellerStore = localStorage.getItem('seller')
+            const sellerData = sellerStore && JSON.parse(sellerStore)[0];
             this.sellerName = sellerData.name;
           }
         } else if (localStorage.getItem('user')) {
-          let userStore = localStorage.getItem('user')
-          let userData = userStore && JSON.parse(userStore);
+          const userStore = localStorage.getItem('user')
+          const userData = userStore && JSON.parse(userStore);
           this.userName = userData.name;
           this.menuType = 'user';
         } else {
           this.menuType = 'default';
         }
       }
+    });
+
+    const localCartData = localStorage.getItem('cartData');
+    if (localCartData) {
+      this.cartItems = JSON.parse(localCartData).length;
+    }
+    this.productService.cartDetails.subscribe((item)=> {
+      this.cartItems = item.length;
     })
   }
 
