@@ -13,11 +13,17 @@ export class SearchComponent implements OnInit{
   }
   searchResult: undefined | ProductData[];
   ngOnInit(): void {
-    const query = this.activeRoute.snapshot.paramMap.get('query');
-    console.log(query);
-    query && this.productService.searchProduct(query).subscribe((result)=> {
-      this.searchResult = result;
-    })
+    //const query = this.activeRoute.snapshot.paramMap.get('query');
+    this.activeRoute.params.subscribe(
+      (query: any) => {
+
+         this.productService.searchProduct(query.query).subscribe((result)=> {
+          this.searchResult = result;
+        })
+
+      }
+    );
+
   }
 
 }
