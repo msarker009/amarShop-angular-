@@ -1,0 +1,16 @@
+.order-page h1 {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.order-data {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  align-items: center;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+}
+.order-page .order-image {
+  width: 100px;
+}
