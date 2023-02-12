@@ -21,46 +21,16 @@
       "id": 1
     },
     {
-      "name": "fgjj",
-      "email": "fdjgjk",
-      "password": "fdkkgjdk",
+      "name": "Rakib Hasan",
+      "email": "rk@gmail.com",
+      "password": "rk@123",
       "id": 2
     },
     {
-      "name": "fgjj",
-      "email": "fdjgjk",
-      "password": "fdkkgjdk",
+      "name": "",
+      "email": "",
+      "password": "",
       "id": 3
-    },
-    {
-      "name": "vfjg",
-      "email": "fdjhgdj",
-      "password": "fkjkj",
-      "id": 4
-    },
-    {
-      "name": "fjdgf",
-      "email": "fdjhf",
-      "password": "dfjghdj",
-      "id": 5
-    },
-    {
-      "name": "jj",
-      "email": "jjj",
-      "password": "jjj",
-      "id": 6
-    },
-    {
-      "name": "bhjbh",
-      "email": "jjk",
-      "password": "nknnk",
-      "id": 7
-    },
-    {
-      "name": "fkkgkjd",
-      "email": "jhhgrjts",
-      "password": "kfdghkfjdkh",
-      "id": 8
     }
   ],
   "products": [
@@ -137,18 +107,6 @@
       "id": 8
     }
   ],
-  "cart": [
-    {
-      "name": "HP Laptop",
-      "price": 50000,
-      "color": "Silver",
-      "category": "Laptops",
-      "description": "Processor: Intel Core i3-1115G4 (6MB Cache, 3.00 GHz up to 4.10 GHz)",
-      "image": "https://www.startech.com.bd/image/cache/catalog/laptop/hp-laptop/250-g8/250-g8-01-500x500.jpg",
-      "id": 3,
-      "quantity": 1,
-      "userId": 1,
-      "productId": 3
-    }
-  ]
+  "cart": [],
+  "orders": []
 }
