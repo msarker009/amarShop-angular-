@@ -1,7 +1,6 @@
 import {Component} from '@angular/core';
 import {SellerService} from '../services/seller.service';
 import {signIn, signUp} from '../type/authInfo';
-import {Router} from '@angular/router'
 
 @Component({
   selector: 'app-seller-auth',
@@ -14,8 +13,8 @@ export class SellerAuthComponent {
   constructor(private seller: SellerService) {
   }
 
-  isShowForm: boolean = false;
-  isAuthError: string = '';
+  isShowForm = false;
+  isAuthError = '';
 
   signUp(signUpData: signUp): void {
     this.seller.userSignUp(signUpData);
