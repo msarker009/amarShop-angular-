@@ -17,6 +17,10 @@ import { SearchComponent } from './search/search.component';
 import { FooterComponent } from './footer/footer.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { UserAuthComponent } from './user-auth/user-auth.component';
+import { CartPageComponent } from './cart-page/cart-page.component';
+import { CheckoutPageComponent } from './checkout-page/checkout-page.component';
+import { OrderPageComponent } from './order-page/order-page.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -30,7 +34,10 @@ import { UserAuthComponent } from './user-auth/user-auth.component';
     SearchComponent,
     FooterComponent,
     ProductDetailsComponent,
-    UserAuthComponent
+    UserAuthComponent,
+    CartPageComponent,
+    CheckoutPageComponent,
+    OrderPageComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +45,8 @@ import { UserAuthComponent } from './user-auth/user-auth.component';
     FormsModule,
     HttpClientModule,
     FontAwesomeModule,
-    NgbModule
+    NgbModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
