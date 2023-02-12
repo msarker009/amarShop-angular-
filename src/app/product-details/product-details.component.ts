@@ -15,6 +15,7 @@ export class ProductDetailsComponent implements OnInit {
   productDetails: undefined | ProductData;
   productQuantity = 1;
   removeCart = false;
+  cartData: undefined | ProductData;
 
   handleQuantity(val: string) {
     if (this.productQuantity < 20 && val === "max") {
@@ -41,14 +42,25 @@ export class ProductDetailsComponent implements OnInit {
         //delete cartData.id;
         this.productService.userAddToCart(cartData).subscribe((result)=> {
           if (result) {
-            console.log("add");
+           this.productService.getCartList(userId);
+           this.removeCart = true;
           }
         })
       }
     }
   }
   removeFromCart(id: number) {
-    this.productService.removeFromCarts(id);
+    if (!localStorage.getItem("user")) {
+      this.productService.removeFromCarts(id);
+    } else {
+      const user = localStorage.getItem('user');
+      const userId = user && JSON.parse(user).id;
+      this.cartData && this.productService.userRemoveToCart(this.cartData.id).subscribe((result)=>{
+        if (result) {
+          this.productService.getCartList(userId);
+        }
+      })
+    }
     this.removeCart = false;
   }
 
@@ -67,6 +79,20 @@ export class ProductDetailsComponent implements OnInit {
           this.removeCart = false;
         }
       }
+      const user = localStorage.getItem('user');
+      if (user) {
+        const userId = user && JSON.parse(user).id;
+        this.productService.getCartList(userId);
+        this.productService.cartDetails.subscribe((result)=>{
+          const item = result.filter((item : ProductData)=> productId?.toString() === item.productId?.toString())
+          if (item.length) {
+            this.cartData = item[0];
+            this.removeCart = true;
+          }
+
+        })
+      }
+
     });
   }
 
