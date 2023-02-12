@@ -33,6 +33,7 @@ export class HeaderComponent implements OnInit {
           const userData = userStore && JSON.parse(userStore);
           this.userName = userData.name;
           this.menuType = 'user';
+          this.productService.getCartList(userData.id);
         } else {
           this.menuType = 'default';
         }
@@ -76,6 +77,7 @@ export class HeaderComponent implements OnInit {
   userLogout(){
     localStorage.removeItem('user');
     this.route.navigate(['/user-auth']);
+    this.productService.cartDetails.emit([]);
   }
 
 }

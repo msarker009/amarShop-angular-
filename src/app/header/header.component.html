@@ -1,6 +1,6 @@
-<nav class="nav">
+<div class="nav">
     <h1><a routerLink="/">amarShop</a></h1>
-    <div *ngIf="menuType === 'default'" class="nav-search">
+    <div *ngIf="menuType !== 'seller'" class="nav-search">
         <input type="text" (keyup)="searchProduct($event)" (blur)="hideSearch()"
                #searchItem placeholder="Search for Products" />
         <button (click)="submitSearch(searchItem.value)">Search</button>
@@ -19,9 +19,10 @@
     </ul>
     <ul *ngSwitchCase="'user'">
       <li><a routerLink="/">Home</a></li>
+      <li><a routerLink="order-page" >My Order</a></li>
       <li><a >{{userName | titlecase}}</a></li>
       <li><a (click)="userLogout()">Logout</a></li>
-      <li><a routerLink="#">Cart({{cartItems}})</a></li>
+      <li><a [routerLink]="cartItems > 0 ?'cart-page': null">Cart({{cartItems}})</a></li>
     </ul>
     <ul *ngSwitchCase="'seller'">
       <li><a routerLink="seller-add-product">Add Product</a></li>
@@ -31,4 +32,4 @@
     </ul>
   </div>
 
-</nav>
+</div>
