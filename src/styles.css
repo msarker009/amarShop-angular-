@@ -3,7 +3,7 @@ body {
 }
 
 .container {
-  margin-left: 5%;
+  margin-left: 7%;
   margin-right: 5%;
 }
 
@@ -35,6 +35,7 @@ body {
 }
 .success-message {
   color: green;
+  text-align: center;
 }
 .form-button-edit {
   margin-right: 5px;
@@ -77,3 +78,9 @@ body {
   display: flex;
   justify-content: center;
 }
+.max-width {
+  width: 100%;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
