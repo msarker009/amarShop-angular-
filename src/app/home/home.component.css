@@ -39,3 +39,28 @@
   justify-content: space-between;
   padding: 10px;
 }
+.product-add {
+  cursor: pointer;
+  background-color: #fff;
+  border: 1px solid #ebebeb;
+  padding: 5px 2px;
+  border-radius: 3px;
+  text-decoration: none;
+  color: #f85606;
+  text-align: center;
+}
+.product-view {
+  cursor: pointer;
+  background-color: #fff;
+  border: 1px solid #ebebeb;
+  padding: 5px 2px;
+  border-radius: 3px;
+  text-decoration: none;
+  color: #007185;
+  text-align: center;
+}
+
+.product-view:hover, .product-add:hover {
+  background-color: #55584d;
+  color: white;
+}
