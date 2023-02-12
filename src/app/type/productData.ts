@@ -1,4 +1,5 @@
 export interface ProductData {
+  productId: undefined | number;
   id: number
   name: string;
   price: number;
@@ -10,7 +11,7 @@ export interface ProductData {
 }
 
 export interface cartItem {
-  id: number
+  id: number;
   name: string;
   price: number;
   color: string;
@@ -20,4 +21,11 @@ export interface cartItem {
   quantity: undefined | number;
   userId: number;
   productId: number;
+}
+export interface priceSummary {
+  price: number;
+  tax: number;
+  delivery: number;
+  discount: number;
+  total: number;
 }
