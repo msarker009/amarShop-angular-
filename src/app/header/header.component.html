@@ -10,7 +10,7 @@
         </li>
       </ul>
     </div>
-  <div [ngSwitch]="menuType">
+  <div [ngSwitch]="menuType" class="nav-item">
     <ul *ngSwitchCase="'default'">
         <li><a routerLink="/">Home</a></li>
         <li><a routerLink="/seller-auth">Seller</a></li>

@@ -60,6 +60,9 @@
   color: #fff;
   cursor: pointer;
 }
+.nav li a:hover {
+  color: #ff686e;
+}
 
 h1 a {
   text-decoration: none;
