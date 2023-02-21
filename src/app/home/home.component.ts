@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ProductService} from "../services/product.service";
-import {ProductData} from "../type/productData";
+import {cartItem, ProductData} from "../type/productData";
 
 @Component({
   selector: 'app-home',
@@ -13,6 +13,34 @@ export class HomeComponent implements OnInit{
 
   popularProductLists: undefined| ProductData[];
   trendyProductLists: undefined| ProductData[];
+  productDetails: undefined | ProductData;
+  productQuantity = 1;
+
+  addTrendyItemToCart(id: number) {
+    this.productService.getProductById(id).subscribe((result) => {
+      this.productDetails = result;
+      if (this.productDetails) {
+        this.productDetails.quantity = this.productQuantity;
+        if (!localStorage.getItem('user')) {
+          this.productService.addToCart(this.productDetails)
+        } else {
+          const user = localStorage.getItem('user');
+          const userId = user && JSON.parse(user).id;
+          const cartData: cartItem = {
+            ...this.productDetails,
+            userId,
+            productId: this.productDetails.id
+          }
+          //delete cartData.id;
+          this.productService.userAddToCart(cartData).subscribe((result)=> {
+            if (result) {
+              this.productService.getCartList(userId);
+            }
+          })
+        }
+      }
+    });
+  }
 
   ngOnInit(): void {
     this.productService.getPopularProduct().subscribe((data)=> {
